@@ -1,0 +1,33 @@
+{
+  "namespace": "de.unistuttgart.ipvs.dds.avro",
+  "type": "record",
+  "name": "TemperatureData",
+  "doc": "Message sent by sensors recording temperature data.",
+  "fields": [
+    {
+      "name": "sensor_id",
+      "type": "string",
+      "doc": "The unique ID of the sensor sending the data."
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "default": 0,
+      "doc": "The unix timestamp at which the data was recorded."
+    },
+    {
+      "name": "temperature",
+      "type": "double",
+      "doc": "The value of the temperature data."
+    },
+    {
+      "name": "unit",
+      "type": {
+        "name": "TemperatureUnit",
+        "type": "enum",
+        "symbols": [ "C", "F", "K" ]
+      },
+      "doc": "Whether the temperature was recorded in degrees celsius, degrees Fahrenheit or kelvin."
+    }
+  ]
+}

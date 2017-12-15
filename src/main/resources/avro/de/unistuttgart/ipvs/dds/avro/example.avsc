@@ -1,0 +1,9 @@
+{
+  "namespace": "de.unistuttgart.ipvs.dds.avro",
+  "type": "record",
+  "name": "Example",
+  "doc": "Example Message.",
+  "fields": [
+    { "name": "message", "type": "string", "doc": "The content of the message." }
+  ]
+}
